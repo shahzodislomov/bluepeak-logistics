@@ -107,11 +107,11 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
           {step === "signIn" ? (
             <>
               <CardHeader className="text-center">
-              <div className="flex justify-center">
+                  <div className="flex justify-center">
                     <img
                       src="https://harmless-tapir-303.convex.cloud/api/storage/ea4122b5-7fc3-4e81-9b2d-0a436ad6dffd"
                       alt="BluePeak Logo"
-                      className="h-16 mb-4 mt-4 cursor-pointer"
+                      className="h-20 mb-4 mt-4 cursor-pointer"
                       onClick={() => navigate("/")}
                     />
                   </div>
