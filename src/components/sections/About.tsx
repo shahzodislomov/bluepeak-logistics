@@ -49,11 +49,16 @@ export function About() {
           {values.map((value, index) => (
             <motion.div
               key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, rotateX: -15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              transition={{ duration: 0.7, delay: index * 0.15, type: "spring", bounce: 0.3 }}
+              whileHover={{ 
+                y: -12, 
+                scale: 1.02,
+                rotateY: 5,
+                transition: { duration: 0.3, type: "spring", stiffness: 300 } 
+              }}
             >
               <Card className="h-full border-2 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                 <CardContent className="pt-6">

@@ -59,11 +59,16 @@ export function Features() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
-              whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+              initial={{ opacity: 0, scale: 0.85, rotateY: -20, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, rotateY: 0, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
-              whileHover={{ scale: 1.05, y: -5, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.7, delay: index * 0.12, type: "spring", bounce: 0.4 }}
+              whileHover={{ 
+                scale: 1.08, 
+                y: -8, 
+                rotateY: 5,
+                transition: { duration: 0.3, type: "spring", stiffness: 400 } 
+              }}
             >
               <Card className="h-full border-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
                 <CardContent className="pt-6">

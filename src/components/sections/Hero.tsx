@@ -66,32 +66,50 @@ export function Hero() {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <motion.div
-                animate={{ 
-                  rotate: [0, 5, -5, 0],
-                  y: [0, -10, 0]
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <Mountain className="h-20 w-20 text-primary" />
-              </motion.div>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute inset-0 bg-primary/20 rounded-full blur-xl"
-              />
+          <motion.div
+            animate={{ 
+              rotate: [0, 8, -8, 0],
+              y: [0, -15, 0],
+              scale: [1, 1.05, 1]
+            }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Mountain className="h-20 w-20 text-primary drop-shadow-lg" />
+          </motion.div>
+          <motion.div
+            animate={{ 
+              scale: [1, 1.3, 1], 
+              opacity: [0.4, 0.6, 0.4],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="absolute inset-0 bg-primary/30 rounded-full blur-2xl"
+          />
             </div>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.4 }}
             className="text-5xl md:text-7xl font-bold tracking-tight mb-6"
           >
-            Where Excellence
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Where Excellence
+            </motion.span>
             <br />
-            <span className="text-primary">Meets Its Peak</span>
+            <motion.span 
+              className="text-primary"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              Meets Its Peak
+            </motion.span>
           </motion.h1>
 
           <motion.p

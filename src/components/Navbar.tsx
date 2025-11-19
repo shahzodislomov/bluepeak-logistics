@@ -50,15 +50,16 @@ export function Navbar() {
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
                 className="text-sm font-medium hover:text-primary transition-colors cursor-pointer relative"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.08, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400 }}
               >
                 {item.name}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.2 }}
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"
+                  initial={{ scaleX: 0, opacity: 0 }}
+                  whileHover={{ scaleX: 1, opacity: 1 }}
+                  transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
                 />
               </motion.button>
             ))}
