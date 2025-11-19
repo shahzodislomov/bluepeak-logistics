@@ -1,28 +1,14 @@
-import { v } from "convex/values";
-import { mutation, query } from "./_generated/server";
+// PLACEHOLDER: Contact functions for future API integration
+// This file is not currently in use but provides a template for when you add your custom API
 
-// Query to get all contact submissions (for admin panel later)
-export const list = query({
-  args: {},
-  handler: async (ctx) => {
-    return await ctx.db.query("contacts").order("desc").collect();
-  },
-});
-
-// Mutation to create a new contact submission
-export const create = mutation({
-  args: {
-    name: v.string(),
-    email: v.string(),
-    message: v.string(),
-  },
-  handler: async (ctx, args) => {
-    const contactId = await ctx.db.insert("contacts", {
-      name: args.name,
-      email: args.email,
-      message: args.message,
-      status: "new",
-    });
-    return contactId;
-  },
-});
+// TODO: Replace with your custom API endpoints when ready
+// Example structure:
+//
+// export async function submitContact(data: { name: string; email: string; message: string }) {
+//   const response = await fetch('/api/contact', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify(data)
+//   });
+//   return response.json();
+// }

@@ -1,33 +1,13 @@
-import { getAuthUserId } from "@convex-dev/auth/server";
-import { query, QueryCtx } from "./_generated/server";
+// PLACEHOLDER: User management for future API integration
+// This file is not currently in use but provides a template for when you add your custom API
 
-/**
- * Get the current signed in user. Returns null if the user is not signed in.
- * Usage: const signedInUser = await ctx.runQuery(api.authHelpers.currentUser);
- * THIS FUNCTION IS READ-ONLY. DO NOT MODIFY.
- */
-export const currentUser = query({
-  args: {},
-  handler: async (ctx) => {
-    const user = await getCurrentUser(ctx);
-
-    if (user === null) {
-      return null;
-    }
-
-    return user;
-  },
-});
-
-/**
- * Use this function internally to get the current user data. Remember to handle the null user case.
- * @param ctx
- * @returns
- */
-export const getCurrentUser = async (ctx: QueryCtx) => {
-  const userId = await getAuthUserId(ctx);
-  if (userId === null) {
-    return null;
-  }
-  return await ctx.db.get(userId);
-};
+// TODO: Replace with your custom user management API when ready
+// Example structure:
+//
+// export async function getCurrentUser() {
+//   const response = await fetch('/api/user/current', {
+//     method: 'GET',
+//     credentials: 'include'
+//   });
+//   return response.json();
+// }

@@ -19,10 +19,16 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Connect to your API here
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify({ name, email, message }) })
+      // TODO: Replace with your API endpoint when ready
+      // Example:
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ name, email, message })
+      // });
+      // if (!response.ok) throw new Error('Failed to send message');
       
-      // Simulated delay
+      // Simulated delay for demo purposes
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast.success("Message sent successfully!", {
