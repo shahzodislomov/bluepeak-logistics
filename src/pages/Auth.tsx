@@ -109,7 +109,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
               <CardHeader className="text-center">
                   <div className="flex justify-center">
                     <img
-                      src="https://harmless-tapir-303.convex.cloud/api/storage/ea4122b5-7fc3-4e81-9b2d-0a436ad6dffd"
+                      src="https://harmless-tapir-303.convex.cloud/api/storage/2013b6ac-e63d-489a-b7cd-ea589d777e93"
                       alt="BluePeak Logo"
                       className="h-20 mb-4 mt-4 cursor-pointer"
                       onClick={() => navigate("/")}
