@@ -3,11 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { api } from "@/convex/_generated/api";
 import { motion } from "framer-motion";
 import { Instagram, Loader2, Mail, Send } from "lucide-react";
 import { useState } from "react";
-import { useMutation } from "convex/react";
 import { toast } from "sonner";
 
 export function Contact() {
@@ -16,15 +14,16 @@ export function Contact() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const createContact = useMutation(api.contacts.create);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // TODO: Connect to your CRM or email service API here
-      await createContact({ name, email, message });
+      // TODO: Connect to your API here
+      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify({ name, email, message }) })
+      
+      // Simulated delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast.success("Message sent successfully!", {
         description: "We'll get back to you as soon as possible.",
