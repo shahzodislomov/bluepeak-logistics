@@ -19,16 +19,16 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with your API endpoint when ready
+      // TODO: Replace with your custom API endpoint when ready
       // Example:
-      // const response = await fetch('/api/contact', {
+      // const response = await fetch('YOUR_API_ENDPOINT/contact', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify({ name, email, message })
       // });
       // if (!response.ok) throw new Error('Failed to send message');
       
-      // Simulated delay for demo purposes
+      // Simulated delay for demo purposes - remove when API is ready
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast.success("Message sent successfully!", {
