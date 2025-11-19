@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="https://harmless-tapir-303.convex.cloud/api/storage/2013b6ac-e63d-489a-b7cd-ea589d777e93" alt="BluePeak" className="h-10" />
+              <img src="/bluepeak-logo.png" alt="BluePeak" className="h-10" />
             </div>
             <p className="text-sm text-muted-foreground">
               Where Excellence Meets Its Peak. Building compliant logistics

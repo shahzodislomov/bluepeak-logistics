@@ -39,7 +39,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 cursor-pointer">
-            <img src="https://harmless-tapir-303.convex.cloud/api/storage/2013b6ac-e63d-489a-b7cd-ea589d777e93" alt="BluePeak" className="h-12" />
+            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
