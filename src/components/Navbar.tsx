@@ -48,7 +48,7 @@ export function Navbar() {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
-                className="text-sm font-medium hover:text-primary transition-colors cursor-pointer relative"
+                className="text-base font-semibold hover:text-primary transition-colors cursor-pointer relative"
                 whileHover={{ scale: 1.08, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400 }}
@@ -95,7 +95,7 @@ export function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
-                className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                className="block w-full text-left py-2 text-base font-semibold hover:text-primary transition-colors cursor-pointer"
               >
                 {item.name}
               </button>

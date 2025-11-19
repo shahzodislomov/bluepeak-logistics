@@ -118,25 +118,31 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
           >
-            We help entrepreneurs and logistics businesses in the USA build
-            strong, compliant, and successful companies.
+            Build Strong, Compliant, and Successful Businesses
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
+          >
+            At BluePeak, we help trucking companies, logistics startups, and owner-operators launch with confidence — and stay compliant every mile of the way.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
           >
-            From initial setup to full operational support, BluePeak provides
-            end-to-end services that ensure safety, compliance, and sustainable
-            business growth.
+            From company formation to safety & compliance, we provide full support to ensure your business is ready to operate and ready to grow.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Button
@@ -144,7 +150,7 @@ export function Hero() {
               onClick={() => scrollToSection("#services")}
               className="gap-2 cursor-pointer font-semibold"
             >
-              Explore Services
+              Start Your Company
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
@@ -153,7 +159,7 @@ export function Hero() {
               onClick={() => scrollToSection("#contact")}
               className="cursor-pointer font-semibold border-2 hover:bg-secondary hover:text-secondary-foreground"
             >
-              Contact Us
+              Get Safety Support
             </Button>
           </motion.div>
         </div>
