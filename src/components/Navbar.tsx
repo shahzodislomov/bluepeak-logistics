@@ -30,10 +30,10 @@ export function Navbar() {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -46,13 +46,21 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
-                className="text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                className="text-sm font-medium hover:text-primary transition-colors cursor-pointer relative"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {item.name}
-              </button>
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </motion.button>
             ))}
           </div>
 

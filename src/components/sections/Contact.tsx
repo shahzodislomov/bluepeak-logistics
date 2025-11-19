@@ -173,14 +173,14 @@ export function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20, y: 20 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
+                whileHover={{ scale: 1.03, x: 5, transition: { duration: 0.2 } }}
                 className="block cursor-pointer"
               >
-                <Card className="border-2 hover:border-primary/50 transition-colors">
+                <Card className="border-2 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                   <CardContent className="pt-6">
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-primary/10 rounded-lg">

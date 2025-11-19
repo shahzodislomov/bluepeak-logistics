@@ -59,12 +59,13 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, rotateX: -10 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.7, delay: index * 0.15, type: "spring", bounce: 0.3 }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
-              <Card className="h-full border-2 hover:border-primary/50 transition-colors">
+              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/15 transition-all duration-300">
                 <CardHeader>
                   <div className="flex justify-center mb-4">
                     <div className="p-4 bg-primary/10 rounded-xl">

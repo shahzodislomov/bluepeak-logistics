@@ -53,8 +53,9 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <Card className="h-full border-2 hover:border-primary/50 transition-colors">
+              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="flex justify-center mb-4">
                     <div className="p-3 bg-primary/10 rounded-lg">

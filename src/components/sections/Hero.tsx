@@ -13,45 +13,70 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Animated background elements */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 90, 0],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
-          className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
             rotate: [90, 0, 90],
+            x: [0, -50, 0],
+            y: [0, 30, 0],
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-primary/8 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, -90, 0],
+            x: [0, 30, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/6 rounded-full blur-3xl"
         />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, scale: 0.5, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <Mountain className="h-20 w-20 text-primary" />
               <motion.div
-                animate={{ scale: [1, 1.1, 1] }}
+                animate={{ 
+                  rotate: [0, 5, -5, 0],
+                  y: [0, -10, 0]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Mountain className="h-20 w-20 text-primary" />
+              </motion.div>
+              <motion.div
+                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="absolute inset-0 bg-primary/20 rounded-full blur-xl"
               />
