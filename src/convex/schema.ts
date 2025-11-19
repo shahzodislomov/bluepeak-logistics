@@ -32,12 +32,14 @@ const schema = defineSchema(
       role: v.optional(roleValidator), // role of the user. do not remove
     }).index("email", ["email"]), // index for the email. do not remove or modify
 
-    // add other tables here
-
-    // tableName: defineTable({
-    //   ...
-    //   // table fields
-    // }).index("by_field", ["field"])
+    // Contact form submissions
+    // TODO: Connect to your CRM or email service via API later
+    contacts: defineTable({
+      name: v.string(),
+      email: v.string(),
+      message: v.string(),
+      status: v.string(), // "new", "read", "responded"
+    }),
   },
   {
     schemaValidation: false,
