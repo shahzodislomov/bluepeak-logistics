@@ -40,7 +40,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-20 left-20 w-96 h-96 bg-primary/8 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -53,7 +53,7 @@ export function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/6 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/8 rounded-full blur-3xl"
         />
       </div>
 
@@ -124,7 +124,7 @@ export function Hero() {
             <Button
               size="lg"
               onClick={() => scrollToSection("#services")}
-              className="gap-2 cursor-pointer"
+              className="gap-2 cursor-pointer font-semibold"
             >
               Explore Services
               <ArrowRight className="h-4 w-4" />
@@ -133,7 +133,7 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("#contact")}
-              className="cursor-pointer"
+              className="cursor-pointer font-semibold border-2 hover:bg-secondary hover:text-secondary-foreground"
             >
               Contact Us
             </Button>
