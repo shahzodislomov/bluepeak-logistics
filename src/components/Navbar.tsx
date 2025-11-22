@@ -4,11 +4,9 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -38,9 +36,9 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 cursor-pointer">
+          <a href="/" className="flex items-center gap-2 cursor-pointer">
             <img src="/bluepeak-logo.png" alt="BluePeak" className="h-12" />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

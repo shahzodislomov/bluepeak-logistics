@@ -38,7 +38,7 @@ export function Contact() {
       setName("");
       setEmail("");
       setMessage("");
-    } catch (error) {
+    } catch {
       toast.error("Failed to send message", {
         description: "Please try again or contact us directly via Telegram.",
       });
