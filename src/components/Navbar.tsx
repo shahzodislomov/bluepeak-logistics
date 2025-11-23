@@ -49,6 +49,12 @@ export function Navbar() {
                 {item.name}
               </motion.button>
             ))}
+            <Button
+              onClick={() => scrollToSection("#contact")}
+              className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide cursor-pointer"
+            >
+              Contact Us
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,6 +92,12 @@ export function Navbar() {
                   {item.name}
                 </button>
               ))}
+              <button
+                onClick={() => scrollToSection("#contact")}
+                className="block w-full text-right py-2 text-lg font-bold text-[#ff751f] hover:text-[#e06010] transition-colors cursor-pointer uppercase"
+              >
+                Contact Us
+              </button>
             </div>
           </motion.div>
         )}
