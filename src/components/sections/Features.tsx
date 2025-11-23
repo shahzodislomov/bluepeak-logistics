@@ -90,10 +90,8 @@ export function Features() {
               }`}>
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className={`p-2 rounded-lg shrink-0 ${
-                      feature.color === "orange" ? "bg-[#ff751f]/10" : "bg-[#00357a]/10"
-                    }`}>
-                      <feature.icon className={`h-6 w-6 ${
+                    <div className="shrink-0">
+                      <feature.icon className={`h-8 w-8 ${
                         feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
                       }`} />
                     </div>
