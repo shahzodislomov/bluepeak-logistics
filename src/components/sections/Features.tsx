@@ -7,42 +7,42 @@ export function Features() {
       icon: Lightbulb,
       title: "Clarity",
       description:
-        "Regulations can be confusing — we make them simple. You get clear explanations, transparent steps, and guidance that removes stress and uncertainty. No guessing, no overwhelming terminology — just clarity at every stage.",
+        "We simplify complex regulations and provide clear, actionable guidance at every step.",
       color: "orange",
     },
     {
       icon: Target,
       title: "Accuracy",
       description:
-        "In trucking compliance, every detail matters. We handle all filings with precision to ensure your company is properly registered, fully compliant, and audit-ready from day one. Avoid costly mistakes — choose accuracy.",
+        "Every filing and document is handled with precision to ensure full compliance.",
       color: "blue",
     },
     {
       icon: Users,
       title: "Personal Support",
       description:
-        "We don't operate like a call center. You receive direct, human support from specialists who know your business and stay connected through every step of the process. Real communication, real accountability.",
+        "You receive direct communication and dedicated assistance from experienced specialists.",
       color: "orange",
     },
     {
       icon: Handshake,
       title: "Long-Term Partnership",
       description:
-        "We stay with you beyond setup. From audits to renewals to compliance updates, BluePeak becomes part of your operational backbone — guiding your growth and protecting your business for the long run.",
+        "We support your business beyond formation — through audits, renewals, and ongoing compliance.",
       color: "blue",
     },
     {
       icon: Shield,
       title: "Integrity",
       description:
-        "We believe in honest work, transparent processes, and doing things the right way. No shortcuts, no hidden fees, no rushed filings. You can trust that every action is taken with your best interest in mind.",
+        "We operate with transparency, honesty, and a commitment to doing things the right way.",
       color: "orange",
     },
     {
       icon: Award,
       title: "Excellence",
       description:
-        "We deliver service at the highest standard. From documentation to safety management, our work reflects consistency, professionalism, and deep industry expertise. Excellence isn't our goal — it's our baseline.",
+        "Our high standards ensure consistent, professional, and dependable service.",
       color: "blue",
     },
   ];
