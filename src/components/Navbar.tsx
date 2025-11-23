@@ -7,11 +7,9 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
     { name: "About", path: "#about" },
     { name: "Features", path: "#features" },
     { name: "Services", path: "#services" },
-    { name: "Contact", path: "#contact" },
   ];
 
   const scrollToSection = (path: string) => {
@@ -51,12 +49,6 @@ export function Navbar() {
                 {item.name}
               </motion.button>
             ))}
-            <Button 
-              onClick={() => scrollToSection("#contact")}
-              className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase"
-            >
-              Contact Us
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -94,12 +86,6 @@ export function Navbar() {
                   {item.name}
                 </button>
               ))}
-              <Button 
-                onClick={() => scrollToSection("#contact")}
-                className="w-full bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase"
-              >
-                Contact Us
-              </Button>
             </div>
           </motion.div>
         )}
