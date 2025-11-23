@@ -1,38 +1,50 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { CheckCircle, FileCheck, Rocket, Shield, TrendingUp } from "lucide-react";
+import { Award, Handshake, Lightbulb, Shield, Target, Users } from "lucide-react";
 
 export function Features() {
   const features = [
     {
-      icon: Rocket,
-      title: "Fast Company Setup",
+      icon: Lightbulb,
+      title: "Clarity",
       description:
-        "Quick and compliant company registration to get your business running without delays.",
+        "Regulations can be confusing — we make them simple. You get clear explanations, transparent steps, and guidance that removes stress and uncertainty. No guessing, no overwhelming terminology — just clarity at every stage.",
+      color: "orange",
+    },
+    {
+      icon: Target,
+      title: "Accuracy",
+      description:
+        "In trucking compliance, every detail matters. We handle all filings with precision to ensure your company is properly registered, fully compliant, and audit-ready from day one. Avoid costly mistakes — choose accuracy.",
+      color: "blue",
+    },
+    {
+      icon: Users,
+      title: "Personal Support",
+      description:
+        "We don't operate like a call center. You receive direct, human support from specialists who know your business and stay connected through every step of the process. Real communication, real accountability.",
+      color: "orange",
+    },
+    {
+      icon: Handshake,
+      title: "Long-Term Partnership",
+      description:
+        "We stay with you beyond setup. From audits to renewals to compliance updates, BluePeak becomes part of your operational backbone — guiding your growth and protecting your business for the long run.",
+      color: "blue",
     },
     {
       icon: Shield,
-      title: "Safety & Compliance",
+      title: "Integrity",
       description:
-        "Expert guidance ensuring your business meets all American safety and regulatory requirements.",
+        "We believe in honest work, transparent processes, and doing things the right way. No shortcuts, no hidden fees, no rushed filings. You can trust that every action is taken with your best interest in mind.",
+      color: "orange",
     },
     {
-      icon: FileCheck,
-      title: "Full Management Support",
+      icon: Award,
+      title: "Excellence",
       description:
-        "Complete operational support from documentation to daily business management.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Growth Optimization",
-      description:
-        "Strategic consultation to help your logistics business scale sustainably.",
-    },
-    {
-      icon: CheckCircle,
-      title: "Transparent Process",
-      description:
-        "Clear, reliable processes with no hidden fees or unexpected complications.",
+        "We deliver service at the highest standard. From documentation to safety management, our work reflects consistency, professionalism, and deep industry expertise. Excellence isn't our goal — it's our baseline.",
+      color: "blue",
     },
   ];
 
@@ -46,12 +58,13 @@ export function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
             Why Choose BluePeak
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We guide you through every step of launching a compliant logistics
-            company with expertise and dedication.
+          <p className="text-lg text-[#aaaaaa] max-w-3xl mx-auto leading-relaxed">
+            At BluePeak, we go beyond basic filings and paperwork — we become a
+            long-term partner in building your business. Here's why companies
+            nationwide choose us to guide their setup and compliance journey.
           </p>
         </motion.div>
 
@@ -70,17 +83,25 @@ export function Features() {
                 transition: { duration: 0.3, type: "spring", stiffness: 400 } 
               }}
             >
-              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
+              <Card className={`h-full border-2 transition-all duration-300 ${
+                feature.color === "orange" 
+                  ? "hover:border-[#ff751f]/50 hover:shadow-xl hover:shadow-[#ff751f]/20" 
+                  : "hover:border-[#00357a]/50 hover:shadow-xl hover:shadow-[#00357a]/20"
+              }`}>
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg shrink-0">
-                      <feature.icon className="h-6 w-6 text-primary" />
+                    <div className={`p-2 rounded-lg shrink-0 ${
+                      feature.color === "orange" ? "bg-[#ff751f]/10" : "bg-[#00357a]/10"
+                    }`}>
+                      <feature.icon className={`h-6 w-6 ${
+                        feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
+                      }`} />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold tracking-tight mb-2">
+                      <h3 className="text-lg font-bold tracking-tight mb-2 text-[#00357a]">
                         {feature.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-[#aaaaaa]">
                         {feature.description}
                       </p>
                     </div>
