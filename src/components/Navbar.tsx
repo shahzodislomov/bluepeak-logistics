@@ -42,7 +42,7 @@ export function Navbar() {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
-                className="text-base font-bold text-[#00357a] hover:text-[#ff751f] transition-colors cursor-pointer relative uppercase tracking-wide"
+                className="text-sm font-bold text-[#00357a] hover:text-[#ff751f] transition-colors cursor-pointer relative uppercase tracking-wide"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -51,7 +51,7 @@ export function Navbar() {
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide cursor-pointer"
+              className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide cursor-pointer text-sm"
             >
               Contact Us
             </Button>

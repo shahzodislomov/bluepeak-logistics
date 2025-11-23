@@ -34,10 +34,10 @@ export function About() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             About BluePeak
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             BluePeak specializes in helping individuals and businesses establish
             and manage logistics companies in the USA. We provide comprehensive
             guidance in opening and fully operating logistics companies in
