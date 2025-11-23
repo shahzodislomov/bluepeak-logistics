@@ -20,10 +20,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1]"
+              className="text-base md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1]"
             >
               <span className="text-[#00357a]">Empowering Trucking Companies to Build </span>
-              <span className="text-[#ff751f]">Strong, Compliant, and Growth-Ready </span>
+              <span className="text-[#ff751f]">Strong, Compliant, </span>
+              <span className="text-[#00357a]">and </span>
+              <span className="text-[#ff751f]">Growth-Ready </span>
               <span className="text-[#00357a]">Businesses From Day One</span>
             </motion.h1>
 
