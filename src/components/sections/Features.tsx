@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Award, Handshake, Lightbulb, Shield, Target, Users } from "lucide-react";
 
@@ -68,44 +67,30 @@ export function Features() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, scale: 0.85, rotateY: -20, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, rotateY: 0, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.12, type: "spring", bounce: 0.4 }}
-              whileHover={{ 
-                scale: 1.08, 
-                y: -8, 
-                rotateY: 5,
-                transition: { duration: 0.3, type: "spring", stiffness: 400 } 
-              }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className={`h-full border-2 transition-all duration-300 ${
-                feature.color === "orange" 
-                  ? "hover:border-[#ff751f]/50 hover:shadow-xl hover:shadow-[#ff751f]/20" 
-                  : "hover:border-[#00357a]/50 hover:shadow-xl hover:shadow-[#00357a]/20"
-              }`}>
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="shrink-0">
-                      <feature.icon className={`h-8 w-8 ${
-                        feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
-                      }`} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold tracking-tight mb-2 text-[#00357a]">
-                        {feature.title}
-                      </h3>
-                      <p className="text-sm text-[#aaaaaa]">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0">
+                  <feature.icon className={`h-10 w-10 ${
+                    feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
+                  }`} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold tracking-tight mb-2 text-[#00357a]">
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-[#aaaaaa] leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
