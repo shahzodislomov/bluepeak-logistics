@@ -66,9 +66,13 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:block h-full min-h-[400px] w-full rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-200 flex items-center justify-center"
+            className="hidden lg:flex h-full min-h-[400px] w-full items-center justify-center"
           >
-            <p className="text-gray-400 font-medium">Image Placeholder</p>
+            <img 
+              src="/hero-image.png" 
+              alt="BluePeak Logistics" 
+              className="w-full h-auto object-contain max-h-[600px] rounded-2xl" 
+            />
           </motion.div>
         </div>
       </div>
