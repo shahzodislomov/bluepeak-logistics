@@ -73,7 +73,7 @@ export function Hero() {
             <img 
               src="/hero-image.png" 
               alt="BluePeak Logistics" 
-              className="w-full h-auto object-contain max-h-[600px] rounded-2xl" 
+              className="w-auto h-auto object-contain max-h-[350px] rounded-2xl" 
             />
           </motion.div>
         </div>
