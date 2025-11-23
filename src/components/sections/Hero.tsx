@@ -31,7 +31,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base md:text-lg text-[#aaaaaa] mb-8 max-w-xl leading-relaxed"
+              className="text-base md:text-lg text-[#aaaaaa] mb-8 max-w-xl leading-tight"
             >
               We guide you through every step — forming your company, securing your authority, and ensuring long-term safety and compliance across your operations.
             </motion.p>
