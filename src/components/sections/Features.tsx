@@ -76,7 +76,7 @@ export function Features() {
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                  <feature.icon className={`h-10 w-10 ${
+                  <feature.icon className={`h-8 w-8 ${
                     feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
                   }`} />
                 </div>
