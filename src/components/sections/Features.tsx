@@ -1,38 +1,49 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { CheckCircle, FileCheck, Rocket, Shield, TrendingUp } from "lucide-react";
+import { Award, Handshake, Lightbulb, Shield, Target, Users } from "lucide-react";
 
 export function Features() {
   const features = [
     {
-      icon: Rocket,
-      title: "Fast Company Setup",
+      icon: Lightbulb,
+      title: "Clarity",
       description:
-        "Quick and compliant company registration to get your business running without delays.",
+        "We simplify complex regulations and provide clear, actionable guidance at every step.",
+      color: "orange",
+    },
+    {
+      icon: Target,
+      title: "Accuracy",
+      description:
+        "Every filing and document is handled with precision to ensure full compliance.",
+      color: "blue",
+    },
+    {
+      icon: Users,
+      title: "Personal Support",
+      description:
+        "You receive direct communication and dedicated assistance from experienced specialists.",
+      color: "orange",
+    },
+    {
+      icon: Handshake,
+      title: "Long-Term Partnership",
+      description:
+        "We support your business beyond formation — through audits, renewals, and ongoing compliance.",
+      color: "blue",
     },
     {
       icon: Shield,
-      title: "Safety & Compliance",
+      title: "Integrity",
       description:
-        "Expert guidance ensuring your business meets all American safety and regulatory requirements.",
+        "We operate with transparency, honesty, and a commitment to doing things the right way.",
+      color: "orange",
     },
     {
-      icon: FileCheck,
-      title: "Full Management Support",
+      icon: Award,
+      title: "Excellence",
       description:
-        "Complete operational support from documentation to daily business management.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Growth Optimization",
-      description:
-        "Strategic consultation to help your logistics business scale sustainably.",
-    },
-    {
-      icon: CheckCircle,
-      title: "Transparent Process",
-      description:
-        "Clear, reliable processes with no hidden fees or unexpected complications.",
+        "Our high standards ensure consistent, professional, and dependable service.",
+      color: "blue",
     },
   ];
 
@@ -44,49 +55,40 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-left mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            Why Choose BluePeak
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
+            At <span className="text-[#ff751f]">BluePeak</span>, we go beyond basic filings and paperwork — we become a <span className="text-[#ff751f]">long-term partner</span> in building your business.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We guide you through every step of launching a compliant logistics
-            company with expertise and dedication.
+          <p className="text-lg text-[#aaaaaa] max-w-3xl leading-relaxed">
+            Here's why companies nationwide choose us to guide their setup and compliance journey.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, scale: 0.85, rotateY: -20, y: 30 }}
-              whileInView={{ opacity: 1, scale: 1, rotateY: 0, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.12, type: "spring", bounce: 0.4 }}
-              whileHover={{ 
-                scale: 1.08, 
-                y: -8, 
-                rotateY: 5,
-                transition: { duration: 0.3, type: "spring", stiffness: 400 } 
-              }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-primary/10 rounded-lg shrink-0">
-                      <feature.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold tracking-tight mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0">
+                 <feature.icon className={`h-8 w-8 ${
+                    feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
+                  }`} />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold tracking-tight mb-2 text-[#00357a]">
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-[#aaaaaa] leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

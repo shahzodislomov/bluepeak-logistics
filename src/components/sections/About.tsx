@@ -1,82 +1,38 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Award, Shield, TrendingUp } from "lucide-react";
 
 export function About() {
-  const values = [
-    {
-      icon: Shield,
-      title: "Trusted Expertise",
-      description:
-        "Years of experience supporting American logistics companies with compliance and operational excellence.",
-    },
-    {
-      icon: Award,
-      title: "Full-Service Support",
-      description:
-        "From company registration to daily operations, we guide you through every step of building a compliant business.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Growth Focused",
-      description:
-        "We don't just help you start—we ensure your business meets all regulatory requirements for long-term success.",
-    },
-  ];
-
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            About BluePeak
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            BluePeak specializes in helping individuals and businesses establish
-            and manage logistics companies in the USA. We provide comprehensive
-            guidance in opening and fully operating logistics companies in
-            America.
-          </p>
-        </motion.div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column: Space */}
+          <div className="hidden md:block min-h-[300px]">
+            {/* Space on the left side as requested */}
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
-            <motion.div
-              key={value.title}
-              initial={{ opacity: 0, y: 30, rotateX: -15 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.15, type: "spring", bounce: 0.3 }}
-              whileHover={{ 
-                y: -12, 
-                scale: 1.02,
-                rotateY: 5,
-                transition: { duration: 0.3, type: "spring", stiffness: 300 } 
-              }}
-            >
-              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-                <CardContent className="pt-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <value.icon className="h-8 w-8 text-primary" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold tracking-tight mb-3 text-center">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground text-center">
-                    {value.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          {/* Right Column: Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-left"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a]">
+              Where <span className="text-[#ff751f]">Excellence</span> Meets Its Peak
+            </h2>
+            <div className="space-y-6 text-base md:text-lg text-[#aaaaaa] leading-relaxed">
+              <p>
+                <span className="font-semibold text-[#00357a]">BluePeak</span> was founded with a clear mission: to bring <span className="font-bold text-[#00357a]">structure, clarity,</span> and <span className="font-bold text-[#00357a]">reliability</span> to trucking businesses in an industry where compliance determines success.
+              </p>
+              <p>
+                Whether you are launching a new company or improving an existing one, we provide the <span className="font-bold text-[#00357a]">guidance, expertise,</span> and <span className="font-bold text-[#00357a]">structure</span> you need to stay ahead of regulatory requirements and operate with confidence.
+              </p>
+              <p>
+                Our team specializes in helping businesses navigate the complexities of federal and state regulations so they can focus on what matters — <span className="font-bold text-[#00357a]">safe operations, reliable service,</span> and <span className="font-bold text-[#00357a]">sustainable growth</span>.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
