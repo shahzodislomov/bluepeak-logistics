@@ -48,16 +48,16 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-20">
+    <section id="features" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left mb-16"
+          className="text-left mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
+          <h2 className="text-4xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
             At <span className="text-[#ff751f]">BluePeak</span>, we go beyond basic filings and paperwork — we become a <span className="text-[#ff751f]">long-term partner</span> in building your business.
           </h2>
           <p className="text-lg text-[#aaaaaa] max-w-3xl leading-relaxed">
@@ -65,7 +65,7 @@ export function Features() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -76,7 +76,7 @@ export function Features() {
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
-                 <feature.icon className={`h-8 w-8 ${
+                  <feature.icon className={`h-8 w-8 ${
                     feature.color === "orange" ? "text-[#ff751f]" : "text-[#00357a]"
                   }`} />
                 </div>
