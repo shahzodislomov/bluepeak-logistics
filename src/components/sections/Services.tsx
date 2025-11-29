@@ -30,8 +30,7 @@ export function Services() {
       title: "Safety & Compliance",
       description: "Ongoing support to keep your company compliant, audit-ready, and protected.",
       includes: [
-        "Drug & Alcohol Program",
-        "Clearinghouse Setup",
+        "Drug & Alcohol Program | Clearinghouse Setup",
         "Driver Qualification Files (DQF)",
         "Safety Policies & Manuals",
         "IFTA",
