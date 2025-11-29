@@ -29,7 +29,7 @@ export function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
             className="flex items-center gap-2 cursor-pointer"
           >
-            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-10 w-auto" />
+            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-8 md:h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
