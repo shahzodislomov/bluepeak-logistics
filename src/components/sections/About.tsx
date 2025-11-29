@@ -13,10 +13,10 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="text-left"
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a]">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
               Where <span className="text-[#ff751f]">Excellence</span> Meets Its Peak
             </h2>
-            <div className="space-y-6 text-base md:text-lg text-[#aaaaaa] leading-relaxed">
+            <div className="space-y-3 text-base md:text-lg text-[#aaaaaa] leading-relaxed">
               <p>
                 <span className="font-semibold text-[#00357a]">BluePeak</span> was founded with a clear mission: to bring <span className="font-bold text-[#00357a]">structure, clarity,</span> and <span className="font-bold text-[#00357a]">reliability</span> to trucking businesses in an industry where compliance determines success.
               </p>
