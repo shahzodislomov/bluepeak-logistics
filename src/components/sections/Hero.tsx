@@ -34,7 +34,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1]"
+              className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1]"
             >
               <span className="text-[#00357a]">Empowering Trucking Companies to Build </span>
               <span className="text-[#ff751f]">Strong, Compliant, </span>
@@ -47,7 +47,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-[#aaaaaa] mb-8 max-w-xl leading-tight"
+              className="text-base md:text-lg text-[#aaaaaa] mb-8 max-w-xl leading-tight"
             >
               We guide you through every step — forming your company, securing your authority, and ensuring long-term safety and compliance across your operations.
             </motion.p>
