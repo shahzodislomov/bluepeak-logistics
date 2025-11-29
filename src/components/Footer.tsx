@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/second-logo.jpg" alt="BluePeak" className="h-10" />
+              <img src="https://harmless-tapir-303.convex.cloud/api/storage/5f3b194a-da44-4234-bcb9-25a155afbb2b" alt="BluePeak" className="h-10" />
             </div>
           </div>
 
