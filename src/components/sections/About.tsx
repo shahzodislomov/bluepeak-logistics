@@ -38,7 +38,7 @@ export function About() {
             className="relative h-[300px] md:h-[450px] w-full rounded-2xl overflow-hidden shadow-xl"
           >
             <img 
-              src="https://harmless-tapir-303.convex.cloud/api/storage/f7ae9d92-3178-403e-b9d3-75ca6617e0ae" 
+              src="https://harmless-tapir-303.convex.cloud/api/storage/136647d0-6ff2-47ae-851d-9b7893e63242" 
               alt="BluePeak Logistics Truck" 
               className="object-cover w-full h-full"
             />
