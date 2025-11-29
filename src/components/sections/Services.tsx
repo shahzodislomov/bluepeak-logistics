@@ -78,8 +78,8 @@ export function Services() {
               <Card className="h-full border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
                 <div className="absolute top-0 left-0 w-full h-2 bg-[#ff751f]" />
                 
-                <CardHeader className="pb-4 pt-10 px-8">
-                  <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-2">
+                <CardHeader className="pb-2 pt-8 px-8">
+                  <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-1">
                     {service.title}
                   </CardTitle>
                   <p className="text-sm text-muted-foreground leading-relaxed">
@@ -87,10 +87,10 @@ export function Services() {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="px-8 pb-8 flex-grow flex flex-col justify-between">
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-3">Includes</h4>
-                    <ul className="space-y-3">
+                <CardContent className="px-8 pb-6 flex-grow flex flex-col justify-between">
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-2">Includes</h4>
+                    <ul className="space-y-2">
                       {service.includes.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <div className="h-2 w-2 rounded-full bg-[#ff751f] mt-2 shrink-0 shadow-sm ring-2 ring-[#ff751f]/20" />
@@ -100,8 +100,8 @@ export function Services() {
                     </ul>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-100 bg-[#00357a]/5 -mx-8 px-8 pb-4">
-                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-2 mt-4">Outcome</h4>
+                  <div className="mt-2 pt-3 border-t border-gray-100 bg-[#00357a]/5 -mx-8 px-8 pb-3">
+                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-1 mt-2">Outcome</h4>
                     <div className="flex gap-3">
                       <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />
                       <p className="text-sm text-gray-700 font-medium italic">
