@@ -86,12 +86,12 @@ export function Navbar() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-white border-b border-gray-100 overflow-hidden shadow-lg"
           >
-            <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col items-end">
+            <div className="px-4 pt-2 pb-6 space-y-2 flex flex-col items-end">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.path)}
-                  className="w-full text-right text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
+                  className="w-full text-right text-sm font-bold text-[#00357a] hover:text-[#ff751f] transition-colors uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
                 >
                   {item.name}
                 </button>
@@ -99,7 +99,8 @@ export function Navbar() {
               <div className="pt-2 w-full flex justify-end">
                 <Button
                   onClick={() => scrollToSection("#contact")}
-                  className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full sm:w-auto"
+                  size="sm"
+                  className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide"
                 >
                   Contact Us
                 </Button>

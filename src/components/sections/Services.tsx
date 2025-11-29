@@ -100,7 +100,7 @@ export function Services() {
                     </ul>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-100 bg-gray-50/50 -mx-8 px-8 pb-4">
+                  <div className="mt-4 pt-4 border-t border-gray-100 bg-[#00357a]/5 -mx-8 px-8 pb-4">
                     <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-2 mt-4">Outcome</h4>
                     <div className="flex gap-3">
                       <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />

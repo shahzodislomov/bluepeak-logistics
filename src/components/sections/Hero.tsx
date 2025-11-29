@@ -21,10 +21,17 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex w-full items-center justify-center mb-8 lg:mb-0"
           >
+            {/* Mobile Hero Image */}
+            <img 
+              src="https://harmless-tapir-303.convex.cloud/api/storage/c2e02d3d-d6d8-4fc9-b0ee-f93117ce5fed" 
+              alt="BluePeak Logistics" 
+              className="w-[250px] h-auto object-contain rounded-2xl md:hidden" 
+            />
+            {/* Desktop Hero Image */}
             <img 
               src="/hero-image.png" 
               alt="BluePeak Logistics" 
-              className="w-[250px] md:w-full md:max-w-[400px] h-auto object-contain rounded-2xl" 
+              className="hidden md:block w-full max-w-[400px] h-auto object-contain rounded-2xl" 
             />
           </motion.div>
 
