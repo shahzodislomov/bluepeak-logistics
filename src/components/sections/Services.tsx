@@ -30,11 +30,10 @@ export function Services() {
       title: "Safety & Compliance",
       description: "Ongoing support to keep your company compliant, audit-ready, and protected.",
       includes: [
+        "MVR/PSP and Permit accounts",
         "Drug & Alcohol Program | Clearinghouse Setup",
         "Driver Qualification Files (DQF)",
-        "Safety Policies & Manuals",
-        "IFTA",
-        "....etc"
+        "IFTA and Etc"
       ],
       outcome: "A safe, compliant operation with reduced risk and stronger long-term performance.",
     },
