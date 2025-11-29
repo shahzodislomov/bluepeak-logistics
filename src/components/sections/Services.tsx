@@ -37,14 +37,14 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-8 bg-muted/30">
+    <section id="services" className="py-4 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Our Services

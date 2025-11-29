@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="py-8 bg-white">
+    <section id="about" className="py-4 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

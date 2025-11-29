@@ -48,14 +48,14 @@ export function Features() {
   ];
 
   return (
-    <section id="features" className="py-8">
+    <section id="features" className="py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-left mb-16"
+          className="text-left mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
             At <span className="text-[#ff751f]">BluePeak</span>, we go beyond basic filings and paperwork — we become a <span className="text-[#ff751f]">long-term partner</span> in building your business.
@@ -65,7 +65,7 @@ export function Features() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
