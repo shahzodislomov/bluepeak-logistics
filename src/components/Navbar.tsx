@@ -79,28 +79,28 @@ export function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-20 bg-white z-40 md:hidden flex flex-col p-6 border-t"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg md:hidden overflow-hidden"
           >
-            <div className="flex flex-col space-y-6 mt-4">
+            <div className="flex flex-col items-center justify-center space-y-6 py-8">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.path)}
-                  className="text-left text-2xl font-bold text-[#00357a] hover:text-[#ff751f] transition-colors cursor-pointer border-b border-gray-100 pb-4"
+                  className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors cursor-pointer uppercase tracking-wide"
                 >
                   {item.name}
                 </button>
               ))}
-              <button
+              <Button
                 onClick={() => scrollToSection("#contact")}
-                className="text-left text-2xl font-bold text-[#ff751f] hover:text-[#e06010] transition-colors cursor-pointer pb-4"
+                className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide cursor-pointer text-sm shadow-md hover:shadow-lg transition-all px-8"
               >
                 Contact Us
-              </button>
+              </Button>
             </div>
           </motion.div>
         )}
