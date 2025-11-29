@@ -7,12 +7,8 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/bluepeak-logo.png" alt="BluePeak" className="h-10" />
+              <img src="/second-logo.jpg" alt="BluePeak" className="h-10" />
             </div>
-            <p className="text-sm text-muted-foreground">
-              Where Excellence Meets Its Peak. Building compliant logistics
-              businesses in the USA.
-            </p>
           </div>
 
           <div>
@@ -46,23 +42,15 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <a
-                  href="https://t.me/bluepeaksafety"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  Telegram: @bluepeaksafety
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://t.me/BluePeak_Safety"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  Channel: BluePeak Safety
+                  Telegram Channel: @BluePeak_Safety
                 </a>
+              </li>
+              <li>
               </li>
               <li>
                 <a
