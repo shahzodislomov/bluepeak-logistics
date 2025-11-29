@@ -61,7 +61,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -76,7 +76,7 @@ export function Services() {
               }}
             >
               <Card className="h-full border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00357a] to-[#ff751f]" />
+                <div className="absolute top-0 left-0 w-full h-2 bg-[#ff751f]" />
                 
                 <CardHeader className="pb-4 pt-10 px-8">
                   <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-2">
