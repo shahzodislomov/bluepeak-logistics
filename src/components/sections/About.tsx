@@ -5,14 +5,9 @@ export function About() {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column: Space */}
-          <div className="hidden md:block min-h-[300px]">
-            {/* Space on the left side as requested */}
-          </div>
-
-          {/* Right Column: Text */}
+          {/* Left Column: Text */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -32,6 +27,21 @@ export function About() {
                 Our team specializes in helping businesses navigate the complexities of federal and state regulations so they can focus on what matters — <span className="font-bold text-[#00357a]">safe operations, reliable service,</span> and <span className="font-bold text-[#00357a]">sustainable growth</span>.
               </p>
             </div>
+          </motion.div>
+
+          {/* Right Column: Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative h-full min-h-[300px] md:min-h-[500px] w-full rounded-2xl overflow-hidden shadow-xl"
+          >
+            <img 
+              src="https://harmless-tapir-303.convex.cloud/api/storage/62d91c34-9067-4966-b91c-c5bf104f6197" 
+              alt="BluePeak Logistics Truck" 
+              className="object-cover w-full h-full"
+            />
           </motion.div>
         </div>
       </div>
