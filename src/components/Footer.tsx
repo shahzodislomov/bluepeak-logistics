@@ -29,11 +29,6 @@ export function Footer() {
                   Services
                 </a>
               </li>
-              <li>
-                <a href="#contact" className="hover:text-primary transition-colors">
-                  Contact
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -54,10 +49,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@bluepeaksafety.com"
+                  href="https://www.instagram.com/bluepeak.service?igsh=MXR2YTl1b2VscTM1eg=="
                   className="hover:text-primary transition-colors"
                 >
-                  info@bluepeaksafety.com
+                  instagram: instagram.com/bluepeak.service
                 </a>
               </li>
             </ul>
@@ -66,18 +61,12 @@ export function Footer() {
 
         <div className="border-t pt-8 text-center text-sm text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} BluePeak. All rights reserved. |{" "}
-            <a
-              href="https://bluepeaksafety.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-            >
-              bluepeaksafety.com
-            </a>
+            © {new Date().getFullYear()} BluePeak. All rights reserved.{" "}
           </p>
         </div>
       </div>
     </footer>
   );
+}
+
 }
