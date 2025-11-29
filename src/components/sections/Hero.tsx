@@ -19,7 +19,7 @@ export function Hero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex w-full items-center justify-center mb-8 lg:mb-0"
+            className="flex w-full items-center justify-start md:justify-center mb-8 lg:mb-0"
           >
             {/* Mobile Hero Image */}
             <img 
