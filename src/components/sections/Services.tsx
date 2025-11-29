@@ -49,7 +49,7 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-[#00357a]">
             SERVICES
           </h2>
         </motion.div>
@@ -76,29 +76,29 @@ export function Services() {
                   <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-1">
                     {service.title}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </CardHeader>
                 
                 <CardContent className="px-6 pb-0 flex flex-col flex-grow">
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-2">Includes</h4>
+                    <h4 className="text-base font-semibold text-[#ff751f] uppercase tracking-wider mb-2">Includes</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <div className="h-2 w-2 rounded-full bg-[#ff751f] mt-2 shrink-0 shadow-sm ring-2 ring-[#ff751f]/20" />
-                          <span className="text-sm font-medium text-gray-600 leading-relaxed">{item}</span>
+                          <span className="text-base font-medium text-gray-600 leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="pt-4 border-t border-gray-100 bg-[#ff751f]/10 -mx-6 px-6 pb-6 flex-grow">
-                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-1">Outcome</h4>
+                    <h4 className="text-base font-semibold text-[#00357a] uppercase tracking-wider mb-1">Outcome</h4>
                     <div className="flex gap-3">
                       <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />
-                      <p className="text-sm text-gray-700 font-medium italic">
+                      <p className="text-base text-gray-700 font-medium italic">
                         "{service.outcome}"
                       </p>
                     </div>

@@ -57,10 +57,10 @@ export function Features() {
           transition={{ duration: 0.6 }}
           className="text-left mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
+          <h2 className="text-3xl font-bold tracking-tight mb-6 text-[#00357a] leading-tight max-w-4xl">
             At <span className="text-[#ff751f]">BluePeak</span>, we go beyond basic filings and paperwork — we become a <span className="text-[#ff751f]">long-term partner</span> in building your business.
           </h2>
-          <p className="text-lg text-[#aaaaaa] max-w-3xl leading-relaxed">
+          <p className="text-base text-[#aaaaaa] max-w-3xl leading-relaxed">
             Here's why companies nationwide choose us to guide their setup and compliance journey.
           </p>
         </motion.div>
