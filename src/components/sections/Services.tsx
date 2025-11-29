@@ -1,38 +1,44 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Building2, HeadphonesIcon, ShieldCheck } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export function Services() {
   const services = [
     {
-      icon: Building2,
-      title: "Company Registration & Setup",
-      items: [
-        "LLC / INC formation",
-        "MC & DOT registration",
-        "Complete documentation",
-        "Compliance setup",
+      title: "Company Formation",
+      description: "Complete business setup with all required documentation and filings.",
+      includes: [
+        "LLC / INC Formation",
+        "EIN Application",
+        "Operating Agreement",
+        "Virtual Address (if needed)",
       ],
+      outcome: "A legally formed business — structured, organized, and ready to start operations.",
     },
     {
-      icon: ShieldCheck,
+      title: "Authority Setup",
+      description: "Accurate and timely processing of all federal authority requirements.",
+      includes: [
+        "USDOT Number / MC Authority",
+        "Insurance",
+        "BOC-3 Filing",
+        "FMCSA Portal Setup",
+      ],
+      outcome: "Your authority is fully established with every compliance step properly completed.",
+    },
+    {
       title: "Safety & Compliance",
-      items: [
-        "Safety audits",
-        "FMCSA requirements",
-        "Risk management",
-        "Policy creation",
+      description: "Ongoing support to keep your company compliant, audit-ready, and protected.",
+      includes: [
+        "MVR/PSP accounts",
+        "Drug & Alcohol Program",
+        "Clearinghouse Setup",
+        "Driver Qualification Files (DQF)",
+        "Safety Policies & Manuals",
+        "Permit accounts",
+        "IFTA",
       ],
-    },
-    {
-      icon: HeadphonesIcon,
-      title: "Full Operational Support & Business Growth",
-      items: [
-        "Dispatching support",
-        "Back-office management",
-        "Business optimization",
-        "Long-term consulting",
-      ],
+      outcome: "A safe, compliant operation with reduced risk and stronger long-term performance.",
     },
   ];
 
@@ -44,7 +50,7 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
             Our Services
@@ -69,24 +75,40 @@ export function Services() {
                 transition: { duration: 0.3, type: "spring", stiffness: 350 } 
               }}
             >
-              <Card className="h-full border-none shadow-lg rounded-[2.5rem] p-2 bg-white hover:shadow-2xl transition-all duration-300">
-                <CardHeader className="pb-2 pt-8 px-8">
-                  <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight">
+              <Card className="h-full border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#00357a] to-[#ff751f]" />
+                
+                <CardHeader className="pb-4 pt-10 px-8">
+                  <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-2">
                     {service.title}
                   </CardTitle>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
                 </CardHeader>
-                <CardContent className="px-8 pb-8">
-                  <ul className="space-y-4">
-                    {service.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="h-2.5 w-2.5 rounded-full bg-[#ff751f] mt-2 shrink-0 shadow-sm" />
-                        <span className="text-base font-medium text-gray-600 leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                
+                <CardContent className="px-8 pb-8 flex-grow flex flex-col justify-between">
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-3">Includes</h4>
+                    <ul className="space-y-3">
+                      {service.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <div className="h-2 w-2 rounded-full bg-[#ff751f] mt-2 shrink-0 shadow-sm ring-2 ring-[#ff751f]/20" />
+                          <span className="text-sm font-medium text-gray-600 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-gray-100 bg-gray-50/50 -mx-8 px-8 pb-4">
+                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-2 mt-4">Outcome</h4>
+                    <div className="flex gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />
+                      <p className="text-sm text-gray-700 font-medium italic">
+                        "{service.outcome}"
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
