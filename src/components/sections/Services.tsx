@@ -61,7 +61,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -75,10 +75,10 @@ export function Services() {
                 transition: { duration: 0.3, type: "spring", stiffness: 350 } 
               }}
             >
-              <Card className="h-full border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+              <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
                 <div className="absolute top-0 left-0 w-full h-2 bg-[#ff751f]" />
                 
-                <CardHeader className="pb-2 pt-8 px-8">
+                <CardHeader className="pb-2 pt-8 px-6">
                   <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight mb-1">
                     {service.title}
                   </CardTitle>
@@ -87,8 +87,8 @@ export function Services() {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="px-8 pb-6 flex-grow flex flex-col justify-between">
-                  <div className="mb-4">
+                <CardContent className="px-6 pb-0 flex flex-col">
+                  <div className="mb-6">
                     <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-2">Includes</h4>
                     <ul className="space-y-2">
                       {service.includes.map((item) => (
@@ -100,8 +100,8 @@ export function Services() {
                     </ul>
                   </div>
 
-                  <div className="mt-2 pt-3 border-t border-gray-100 bg-[#00357a]/5 -mx-8 px-8 pb-3">
-                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-1 mt-2">Outcome</h4>
+                  <div className="pt-4 border-t border-gray-100 bg-[#00357a]/5 -mx-6 px-6 pb-6">
+                    <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-1">Outcome</h4>
                     <div className="flex gap-3">
                       <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />
                       <p className="text-sm text-gray-700 font-medium italic">
