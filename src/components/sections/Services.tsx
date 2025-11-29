@@ -44,12 +44,12 @@ export function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
             Our Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-[#aaaaaa] max-w-3xl mx-auto">
             Comprehensive solutions for building and managing your logistics
             business in the USA.
           </p>
@@ -64,32 +64,26 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.18, type: "spring", bounce: 0.35 }}
               whileHover={{ 
-                y: -15, 
-                scale: 1.03,
-                rotateX: 5,
+                y: -10, 
+                scale: 1.02,
                 transition: { duration: 0.3, type: "spring", stiffness: 350 } 
               }}
             >
-              <Card className="h-full border-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/15 transition-all duration-300">
-                <CardHeader>
-                  <div className="flex justify-center mb-4">
-                    <div className="p-4 bg-primary/10 rounded-xl">
-                      <service.icon className="h-10 w-10 text-primary" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-center text-xl">
+              <Card className="h-full border-none shadow-lg rounded-[2.5rem] p-2 bg-white hover:shadow-2xl transition-all duration-300">
+                <CardHeader className="pb-2 pt-8 px-8">
+                  <CardTitle className="text-left text-2xl font-bold text-[#00357a] leading-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
+                <CardContent className="px-8 pb-8">
+                  <ul className="space-y-4">
                     {service.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 text-muted-foreground"
+                        className="flex items-start gap-3"
                       >
-                        <div className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                        <span>{item}</span>
+                        <div className="h-2.5 w-2.5 rounded-full bg-[#ff751f] mt-2 shrink-0 shadow-sm" />
+                        <span className="text-base font-medium text-gray-600 leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
