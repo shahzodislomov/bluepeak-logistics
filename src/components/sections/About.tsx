@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="py-4 bg-white">
+    <section id="about" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text */}
@@ -16,7 +16,7 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
               Where <span className="text-[#ff751f]">Excellence</span> Meets Its Peak
             </h2>
-            <div className="space-y-3 text-base md:text-lg text-[#aaaaaa] leading-relaxed">
+            <div className="space-y-2 text-base md:text-lg text-[#aaaaaa] leading-relaxed">
               <p>
                 <span className="font-semibold text-[#00357a]">BluePeak</span> was founded with a clear mission: to bring <span className="font-bold text-[#00357a]">structure, clarity,</span> and <span className="font-bold text-[#00357a]">reliability</span> to trucking businesses in an industry where compliance determines success.
               </p>
