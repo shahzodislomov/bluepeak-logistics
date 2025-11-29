@@ -47,7 +47,7 @@ export function Contact() {
     }
   };
 
-  const contactLinks = [
+ const contactLinks = [
     {
       icon: Send,
       label: "Telegram",
@@ -61,7 +61,7 @@ export function Contact() {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/bluepeak",
+      href: "https://www.instagram.com/bluepeak.service?igsh=MXR2YTl1b2VscTM1eg==",
     },
     {
       icon: Mail,
