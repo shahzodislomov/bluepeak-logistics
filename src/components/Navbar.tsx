@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,38 +51,52 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu Toggle */}
           <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-[#00357a]">
-                  <Menu className="h-8 w-8" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <SheetTitle className="text-left text-[#00357a] font-bold text-xl mb-6">Menu</SheetTitle>
-                <div className="flex flex-col gap-6">
-                  {navItems.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => scrollToSection(item.path)}
-                      className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors text-left uppercase tracking-wide"
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                  <Button
-                    onClick={() => scrollToSection("#contact")}
-                    className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full"
-                  >
-                    Contact Us
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-[#00357a]"
+            >
+              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+            </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden bg-white border-b border-gray-100 overflow-hidden shadow-lg"
+          >
+            <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.path)}
+                  className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors text-left uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <div className="pt-2">
+                <Button
+                  onClick={() => scrollToSection("#contact")}
+                  className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full"
+                >
+                  Contact Us
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
