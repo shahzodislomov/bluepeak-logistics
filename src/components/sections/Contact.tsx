@@ -1,52 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Instagram, Loader2, Mail, Send } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Instagram, Mail, Send } from "lucide-react";
 
 export function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // TODO: Replace with your custom API endpoint when ready
-      // Example:
-      // const response = await fetch('YOUR_API_ENDPOINT/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ name, email, message })
-      // });
-      // if (!response.ok) throw new Error('Failed to send message');
-      
-      // Simulated delay for demo purposes - remove when API is ready
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast.success("Message sent successfully!", {
-        description: "We'll get back to you as soon as possible.",
-      });
-
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      toast.error("Failed to send message", {
-        description: "Please try again or contact us directly via Telegram.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const contactLinks = [
     {
       icon: Send,
@@ -61,7 +16,7 @@ export function Contact() {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/bluepeak",
+      href: "https://www.instagram.com/bluepeak.service?igsh=MXR2YTl1b2VscTM1eg==",
     },
     {
       icon: Mail,
@@ -89,98 +44,42 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="max-w-xl mx-auto">
-          {/* Contact Form */}
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="mb-12 flex justify-center"
           >
-            <Card className="border-2 mb-10 shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-[#00357a]">Send us a message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Your name"
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="your@email.com"
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Tell us about your project..."
-                      rows={5}
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full cursor-pointer bg-[#ff751f] hover:bg-[#e06010] text-white font-bold"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Social Icons */}
-            <div className="flex justify-center items-center gap-8">
-              {contactLinks.map((link, index) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.1, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-4 rounded-full bg-white shadow-md border border-gray-100 text-[#00357a] hover:bg-[#ff751f] hover:text-white hover:shadow-lg transition-all duration-300"
-                  title={link.label}
-                >
-                  <link.icon className="h-6 w-6" />
-                </motion.a>
-              ))}
-            </div>
+            <img 
+              src="https://harmless-tapir-303.convex.cloud/api/storage/5f3b194a-da44-4234-bcb9-25a155afbb2b" 
+              alt="BluePeak" 
+              className="w-full max-w-2xl h-auto object-contain rounded-2xl shadow-lg" 
+            />
           </motion.div>
+
+          {/* Social Icons */}
+          <div className="flex justify-center items-center gap-8">
+            {contactLinks.map((link, index) => (
+              <motion.a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-4 rounded-full bg-white shadow-md border border-gray-100 text-[#00357a] hover:bg-[#ff751f] hover:text-white hover:shadow-lg transition-all duration-300"
+                title={link.label}
+              >
+                <link.icon className="h-6 w-6" />
+              </motion.a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
