@@ -29,7 +29,18 @@ export function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
             className="flex items-center gap-2 cursor-pointer"
           >
-            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-8 md:h-10 w-auto" />
+            {/* Mobile Logo */}
+            <img 
+              src="https://harmless-tapir-303.convex.cloud/api/storage/cd445df7-67a8-4c3f-a168-604bd001da1b" 
+              alt="BluePeak" 
+              className="h-10 w-auto md:hidden" 
+            />
+            {/* Desktop Logo */}
+            <img 
+              src="/bluepeak-logo.png" 
+              alt="BluePeak" 
+              className="hidden md:block h-10 w-auto" 
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -75,20 +86,20 @@ export function Navbar() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-white border-b border-gray-100 overflow-hidden shadow-lg"
           >
-            <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
+            <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col items-end">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.path)}
-                  className="w-full text-left text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
+                  className="w-full text-right text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="pt-2">
+              <div className="pt-2 w-full flex justify-end">
                 <Button
                   onClick={() => scrollToSection("#contact")}
-                  className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full"
+                  className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full sm:w-auto"
                 >
                   Contact Us
                 </Button>
