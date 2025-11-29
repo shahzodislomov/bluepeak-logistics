@@ -20,7 +20,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-              className="text-base md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 leading-[1.1]"
+              className="text-sm md:text-3xl lg:text-4xl font-bold tracking-tight mb-6 leading-[1.1]"
             >
               <span className="text-[#00357a]">Empowering Trucking Companies to Build </span>
               <span className="text-[#ff751f]">Strong, Compliant, </span>
@@ -33,7 +33,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base md:text-lg text-[#aaaaaa] mb-8 max-w-xl leading-tight"
+              className="text-sm md:text-base text-[#aaaaaa] mb-8 max-w-xl leading-tight"
             >
               We guide you through every step — forming your company, securing your authority, and ensuring long-term safety and compliance across your operations.
             </motion.p>
@@ -51,14 +51,6 @@ export function Hero() {
               >
                 Start Your Company
                 <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => scrollToSection("#contact")}
-                className="cursor-pointer font-bold border-2 border-[#00357a] text-[#00357a] hover:bg-[#00357a] hover:text-white"
-              >
-                Get Safety Support
               </Button>
             </motion.div>
           </div>

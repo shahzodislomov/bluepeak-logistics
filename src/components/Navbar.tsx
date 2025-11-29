@@ -33,7 +33,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2 cursor-pointer">
-            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-16" />
+            <img src="/bluepeak-logo.png" alt="BluePeak" className="h-10" />
           </div>
 
           {/* Desktop Navigation */}
