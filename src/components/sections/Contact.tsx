@@ -85,10 +85,10 @@ export function Contact() {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Get In Touch
+            Contact Us
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ready to start your logistics business? Contact us today for a
+            Ready to start your trucking business? Contact us today for a
             consultation.
           </p>
         </motion.div>
