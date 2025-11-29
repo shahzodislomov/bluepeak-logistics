@@ -35,7 +35,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-[300px] md:h-[450px] w-full rounded-2xl overflow-hidden shadow-xl"
+            className="relative h-[250px] md:h-[350px] w-full rounded-2xl overflow-hidden shadow-xl"
           >
             <img 
               src="https://harmless-tapir-303.convex.cloud/api/storage/136647d0-6ff2-47ae-851d-9b7893e63242" 
