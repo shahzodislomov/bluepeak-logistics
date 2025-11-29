@@ -14,7 +14,21 @@ export function Hero() {
     <section className="min-h-screen flex items-center relative overflow-hidden pt-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column: Text */}
+          {/* Left Column: Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="hidden lg:flex h-full min-h-[400px] w-full items-center justify-center"
+          >
+            <img 
+              src="/hero-image.png" 
+              alt="BluePeak Logistics" 
+              className="w-auto h-auto object-contain max-h-[250px] rounded-2xl" 
+            />
+          </motion.div>
+
+          {/* Right Column: Text */}
           <div className="text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -54,20 +68,6 @@ export function Hero() {
               </Button>
             </motion.div>
           </div>
-
-          {/* Right Column: Space for Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:flex h-full min-h-[400px] w-full items-center justify-center"
-          >
-            <img 
-              src="/hero-image.png" 
-              alt="BluePeak Logistics" 
-              className="w-auto h-auto object-contain max-h-[350px] rounded-2xl" 
-            />
-          </motion.div>
         </div>
       </div>
     </section>
