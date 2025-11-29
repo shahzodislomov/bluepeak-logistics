@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { motion } from "framer-motion";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 
 export function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { name: "About", path: "#about" },
@@ -13,11 +14,13 @@ export function Navbar() {
   ];
 
   const scrollToSection = (path: string) => {
+    setIsOpen(false);
     if (path.startsWith("#")) {
       const element = document.querySelector(path);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setMobileMenuOpen(false);
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       }
     }
   };
@@ -57,54 +60,38 @@ export function Navbar() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden z-50">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[#00357a] hover:bg-transparent"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-8 w-8" />
-              ) : (
-                <Menu className="h-8 w-8" />
-              )}
-            </Button>
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-[#00357a]">
+                  <Menu className="h-8 w-8" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <SheetTitle className="text-left text-[#00357a] font-bold text-xl mb-6">Menu</SheetTitle>
+                <div className="flex flex-col gap-6">
+                  {navItems.map((item) => (
+                    <button
+                      key={item.name}
+                      onClick={() => scrollToSection(item.path)}
+                      className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors text-left uppercase tracking-wide"
+                    >
+                      {item.name}
+                    </button>
+                  ))}
+                  <Button
+                    onClick={() => scrollToSection("#contact")}
+                    className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide w-full mt-4"
+                  >
+                    Contact Us
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-lg md:hidden overflow-hidden"
-          >
-            <div className="flex flex-col items-center justify-center space-y-6 py-8">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.path)}
-                  className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors cursor-pointer uppercase tracking-wide"
-                >
-                  {item.name}
-                </button>
-              ))}
-              <Button
-                onClick={() => scrollToSection("#contact")}
-                className="bg-[#ff751f] hover:bg-[#e06010] text-white font-bold uppercase tracking-wide cursor-pointer text-sm shadow-md hover:shadow-lg transition-all px-8"
-              >
-                Contact Us
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.nav>
   );
 }
