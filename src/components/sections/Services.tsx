@@ -74,8 +74,9 @@ export function Services() {
                 scale: 1.02,
                 transition: { duration: 0.3, type: "spring", stiffness: 350 } 
               }}
+              className="h-full"
             >
-              <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group">
+              <Card className="border-none shadow-xl rounded-[2.5rem] overflow-hidden bg-white hover:shadow-2xl transition-all duration-300 flex flex-col relative group h-full">
                 <div className="absolute top-0 left-0 w-full h-2 bg-[#ff751f]" />
                 
                 <CardHeader className="pb-2 pt-8 px-6">
@@ -87,7 +88,7 @@ export function Services() {
                   </p>
                 </CardHeader>
                 
-                <CardContent className="px-6 pb-0 flex flex-col">
+                <CardContent className="px-6 pb-0 flex flex-col flex-grow">
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-[#ff751f] uppercase tracking-wider mb-2">Includes</h4>
                     <ul className="space-y-2">
@@ -100,7 +101,7 @@ export function Services() {
                     </ul>
                   </div>
 
-                  <div className="pt-4 border-t border-gray-100 bg-[#00357a]/5 -mx-6 px-6 pb-6">
+                  <div className="pt-4 border-t border-gray-100 bg-[#00357a]/5 -mx-6 px-6 pb-6 flex-grow">
                     <h4 className="text-sm font-semibold text-[#00357a] uppercase tracking-wider mb-1">Outcome</h4>
                     <div className="flex gap-3">
                       <CheckCircle2 className="h-5 w-5 text-[#00357a] shrink-0" />
