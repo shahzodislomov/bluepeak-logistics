@@ -80,7 +80,7 @@ export function Navbar() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.path)}
-                  className="text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors text-left uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
+                  className="w-full text-left text-lg font-bold text-[#00357a] hover:text-[#ff751f] transition-colors uppercase tracking-wide py-2 border-b border-gray-50 last:border-none"
                 >
                   {item.name}
                 </button>
