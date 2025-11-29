@@ -1,5 +1,3 @@
-
-
 export function Footer() {
   return (
     <footer className="bg-muted/30 border-t py-12">
@@ -67,6 +65,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
-
 }
