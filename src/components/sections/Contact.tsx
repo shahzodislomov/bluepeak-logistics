@@ -51,25 +51,21 @@ export function Contact() {
     {
       icon: Send,
       label: "Telegram",
-      value: "@bluepeaksafety",
       href: "https://t.me/bluepeaksafety",
     },
     {
       icon: Send,
       label: "Telegram Channel",
-      value: "BluePeak Safety",
       href: "https://t.me/BluePeak_Safety",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      value: "@bluepeak",
       href: "https://instagram.com/bluepeak",
     },
     {
       icon: Mail,
       label: "Email",
-      value: "info@bluepeaksafety.com",
       href: "mailto:info@bluepeaksafety.com",
     },
   ];
@@ -82,9 +78,9 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
             Contact Us
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -93,17 +89,17 @@ export function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="max-w-xl mx-auto">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="border-2">
+            <Card className="border-2 mb-10 shadow-lg">
               <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
+                <CardTitle className="text-[#00357a]">Send us a message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -144,7 +140,7 @@ export function Contact() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full cursor-pointer"
+                    className="w-full cursor-pointer bg-[#ff751f] hover:bg-[#e06010] text-white font-bold"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -162,51 +158,28 @@ export function Contact() {
                 </form>
               </CardContent>
             </Card>
-          </motion.div>
 
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-4"
-          >
-            {contactLinks.map((link, index) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30, y: 25, scale: 0.9 }}
-                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.12, type: "spring", bounce: 0.4 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  x: 8,
-                  rotateY: 3,
-                  transition: { duration: 0.3, type: "spring", stiffness: 400 } 
-                }}
-                className="block cursor-pointer"
-              >
-                <Card className="border-2 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
-                        <link.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">
-                          {link.label}
-                        </p>
-                        <p className="font-semibold">{link.value}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.a>
-            ))}
+            {/* Social Icons */}
+            <div className="flex justify-center items-center gap-8">
+              {contactLinks.map((link, index) => (
+                <motion.a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-4 rounded-full bg-white shadow-md border border-gray-100 text-[#00357a] hover:bg-[#ff751f] hover:text-white hover:shadow-lg transition-all duration-300"
+                  title={link.label}
+                >
+                  <link.icon className="h-6 w-6" />
+                </motion.a>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
