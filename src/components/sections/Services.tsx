@@ -50,12 +50,8 @@ export function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#00357a]">
-            Our Services
+            SERVICES
           </h2>
-          <p className="text-lg text-[#aaaaaa] max-w-3xl mx-auto">
-            Comprehensive solutions for building and managing your logistics
-            business in the USA.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
