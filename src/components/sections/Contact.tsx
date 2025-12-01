@@ -37,11 +37,6 @@ export function Contact() {
   };
 
   const contactLinks = [
-    // {
-    //   icon: Send,
-    //   label: "Telegram",
-    //   href: "https://t.me/bluepeaksafety",
-    // },
     {
       icon: Send,
       label: "Telegram Channel",
