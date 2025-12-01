@@ -5,7 +5,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="https://harmless-tapir-303.convex.cloud/api/storage/5f3b194a-da44-4234-bcb9-25a155afbb2b" alt="BluePeak" className="h-10" />
+              <img src="https://harmless-tapir-303.convex.cloud/api/storage/5f3b194a-da44-4234-bcb9-25a155afbb2b" alt="BluePeak" className="h-20 w-auto" />
             </div>
           </div>
 
@@ -30,7 +30,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+         <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -51,6 +51,14 @@ export function Footer() {
                   className="hover:text-primary transition-colors"
                 >
                   instagram
+                </a>
+              </li>
+               <li>
+                <a
+                  href="service@bluepeak.uz"
+                  className="hover:text-primary transition-colors"
+                >
+                 Email: service@bluepeak.uz
                 </a>
               </li>
             </ul>
