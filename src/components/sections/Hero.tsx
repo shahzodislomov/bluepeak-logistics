@@ -25,7 +25,7 @@ export function Hero() {
             <img 
               src="https://harmless-tapir-303.convex.cloud/api/storage/c2e02d3d-d6d8-4fc9-b0ee-f93117ce5fed" 
               alt="BluePeak Logistics" 
-              className="w-[250px] h-auto object-contain rounded-2xl md:hidden" 
+              className="w-[450px] h-auto object-contain rounded-2xl md:hidden" 
             />
             {/* Desktop Hero Image */}
             <img 
