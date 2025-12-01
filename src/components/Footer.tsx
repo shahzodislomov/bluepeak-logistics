@@ -40,7 +40,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  Telegram Channel: @BluePeak_Safety
+                  Telegram Channel
                 </a>
               </li>
               <li>
@@ -50,7 +50,7 @@ export function Footer() {
                   href="https://www.instagram.com/bluepeak.service?igsh=MXR2YTl1b2VscTM1eg=="
                   className="hover:text-primary transition-colors"
                 >
-                  instagram: instagram.com/bluepeak.service
+                  instagram
                 </a>
               </li>
             </ul>
